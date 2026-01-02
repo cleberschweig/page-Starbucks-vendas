@@ -1,0 +1,118 @@
+header {
+    background-color: var (--color-neutral-5 #9e8f85);
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    #nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+
+        .logo {
+            width: 180px;
+        }
+
+        #nav-links li a {
+            text-decoration: none;
+            color: #006241;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        #nav-links li a:hover {
+            color: #006241;
+        }
+
+        .btn-default {
+            color: #006241;
+        }
+
+        .btn-default {
+            color: #1e0e05;
+        }
+
+        @media (max-width: 768px) {
+        display: none; /* Esconde o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        
+        }
+
+
+
+        ul {
+            display: none;
+            list-style: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            background-color: var(--color-neutral-5 #7e6e65);
+            left: 0;
+            padding: 1rem;
+
+            &.show {
+                display: flex ;
+            }
+
+            li {
+                text-align: center;
+
+                a {
+                    color: var(--color-neutral-8 #1e0e05);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                
+
+                &:hover {
+                    color: (--color-primary-1 #3f3107);
+                    border-bottom:  1px solid var(--color-primary-1 #FFC836);
+                }
+            }
+        }
+
+    }
+
+        .btn-default {
+            display: none;
+        }
+    }
+
+
+@media( min-width: 769px) {
+    header {
+        .navbar{
+            .btn-mobile {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                gap: 1rem;
+                width: auto;
+                padding: 0;
+            }
+
+            .btn-default {
+                display: block;
+            }
+        }
+    }
+    
+}
